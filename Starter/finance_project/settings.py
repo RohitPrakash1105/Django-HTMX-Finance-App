@@ -138,3 +138,9 @@ INTERNAL_IPS = [
 
 AUTH_USER_MODEL = 'tracker.User'
 LOGIN_REDIRECT_URL = 'index'
+
+# Required for django-allauth to properly authenticate and login users
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
